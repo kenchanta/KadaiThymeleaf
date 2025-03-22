@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Kadai of Thymeleaf</title>
+</head>
+<body>
+    <h1>Thymeleaf課題</h1>
+    <p>値を入力してください。</p>
+    <!--三項演算子-->
+    <p th:text="'前回入力された値は「' + (${previous} != null ? ${previous} : 'ありません') + '」でした'"></p>
+    <form method="post" action="/output">
+        <input type="text" name="val">
+        <button type="submit">送信</button>
+    </form>
+</body>
+</html>
